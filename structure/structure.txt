@@ -1,0 +1,28 @@
+gs-trinite-website/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   │       ├── download1.jpg
+│   │       ├── download2.jpg
+│   │       ├── download4.jpg
+│   │       ├── download5.jpg
+│   │       ├── download6.jpg
+│   │       ├── download7.jpg
+│   │       ├── download8.jpg
+│   │       └── hero-bg.jpg
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Programs.jsx
+│   │   ├── News.jsx
+│   │   └── Footer.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+├── vite.config.js
+└── index.html
