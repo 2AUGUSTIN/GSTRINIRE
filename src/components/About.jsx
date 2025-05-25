@@ -187,14 +187,14 @@ export default function About() {
                   <Phone className="mr-3 text-blue-700 flex-shrink-0 mt-1" size={20} />
                   <div>
                     <h4 className="font-medium">Phone:</h4>
-                    <p>+250 788 123 456</p>
+                    <p>+250 78*******</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Mail className="mr-3 text-blue-700 flex-shrink-0 mt-1" size={20} />
                   <div>
                     <h4 className="font-medium">Email:</h4>
-                    <p>info@gstrinite.rw</p>
+                    <p>gstrinite@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function About() {
             </div>
 
             {/* Values */}
-            <div className="bg-blue-700 text-white rounded-lg shadow-md p-6">
+            <div className="bg-blue-900 text-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold mb-4 border-b border-blue-600 pb-2">Our Values</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">

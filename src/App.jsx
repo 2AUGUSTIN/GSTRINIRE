@@ -1,43 +1,40 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import About from './components/About';
-import Admission from './components/Admission';
-import Programs from './components/Programs';
-import News from './components/News';
-import Academics from './components/Academics';
-import Contact from './components/Contact';
-import Gallery from './components/Gallery'; // Fixed path (lowercase 'c')
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-function Home() {
-  return (
-    <>
-      <Hero />
-      <Programs />
-      <News />
-    </>
-  );
-}
+import Header from './Components/Header';
+import About from './Components/About';
+import Admission from './Components/Admission';
+import Academics from './Components/Academics';
+import Contact from './Components/Contact';
+import Gallery from './Components/Gallery';
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import News from'./Components/News';
+
+import './App.css';
+
 
 function App() {
-  // Use environment variable for client ID
-  const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || 'your-client-id.apps.googleusercontent.com';
+  const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
 
   return (
     <GoogleOAuthProvider clientId={googleClientId}>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/admission" element={<Admission />} />
-        <Route path="/academics" element={<Academics />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
-      </Routes>
-      <Footer />
+      <div className="app">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/admission" element={<Admission />} />
+            <Route path="/academics" element={<Academics />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/news" element={<News />} />
+          </Routes>
+        </main>
+        <Footer /> {/* Footer is now outside Routes and will show on all pages */}
+      </div>
     </GoogleOAuthProvider>
   );
 }
